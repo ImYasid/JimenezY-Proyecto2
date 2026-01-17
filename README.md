@@ -1,9 +1,5 @@
 # Servicio Integrado de Directorio y Autenticación
 
-Este proyecto implementa un prototipo funcional de una infraestructura de autenticación centralizada para la **Facultad de Ingeniería de Sistemas (FIS)**. Utiliza tecnologías de código abierto para simular un entorno de laboratorio real, integrando servicios de directorio, autenticación segura, resolución de nombres y sincronización de tiempo.
-
-## 📋 Descripción del Proyecto
-
 El sistema automatiza el despliegue y la configuración de los siguientes servicios en un servidor Linux (Ubuntu/Debian):
 
 * **OpenLDAP (Slapd):** Directorio centralizado para almacenar usuarios, materias, profesores y activos (PCs).
@@ -13,13 +9,11 @@ El sistema automatiza el despliegue y la configuración de los siguientes servic
 
 Además, incluye un **Script de Gestión en Bash** que actúa como interfaz principal para:
 
-1. Aprovisionar el servidor desde cero.
+1. Resetear el servidor desde cero.
 2. Simular el inicio de sesión de estudiantes en los laboratorios.
 3. Auditar accesos y detectar incidentes de seguridad.
 
-## 🚀 Instalación y Despliegue
-
-### Pasos de Instalación
+## 🚀 Pasos de Instalación
 
 1. **Clonar el repositorio:**
 ```bash
@@ -42,7 +36,7 @@ sudo ./JimenezY-Proyecto2.sh
 
 ```
 
-## ⚙️ Configuración y Uso
+## ⚙️ Uso y Funcionalidades
 
 Al iniciar el script, verás un menú interactivo con las siguientes opciones:
 
@@ -90,16 +84,6 @@ JimenezY-Proyecto2/
     └── 4_materias.ldif       # Asignaturas y horarios
 
 ```
-
-## 🛡️ Seguridad y Credenciales
-
-Para efectos de prototipo académico, se utilizan las siguientes credenciales predeterminadas dentro del script:
-
-* **Dominio:** `FIS.EPN.LOCAL`
-* **Admin LDAP/Kerberos:** `admin` / `admin/admin`
-* **Contraseña Maestra:** `Sistemas2026`
-* **Log de Auditoría:** `/var/log/fis_auditoria.log`
-
 ## 👤 Autor
 
 **Yasid Jiménez**
