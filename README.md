@@ -7,12 +7,6 @@ El sistema automatiza el despliegue y la configuración de los siguientes servic
 * **Bind9 (DNS):** Resolución de nombres local para el dominio `fis.epn.local`.
 * **Chrony (NTP):** Sincronización de tiempo para asegurar la validez de los tickets Kerberos.
 
-Además, incluye un **Script de Gestión en Bash** que actúa como interfaz principal para:
-
-1. Resetear el servidor desde cero.
-2. Simular el inicio de sesión de estudiantes en los laboratorios.
-3. Auditar accesos y detectar incidentes de seguridad.
-
 ## 🚀 Pasos de Instalación
 
 1. **Clonar el repositorio:**
