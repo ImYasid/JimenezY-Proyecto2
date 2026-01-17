@@ -1,0 +1,130 @@
+dn: uid=tomala,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ing._Tomala
+sn: Docente FIS
+uid: tomala
+uidNumber: 3839
+gidNumber: 5000
+homeDirectory: /home/tomala
+loginShell: /bin/bash
+userPassword: {SASL}tomala
+description: Encargado de Computacion_Distribuida
+dn: uid=dra._solis,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Dra._Solis
+sn: Docente FIS
+uid: dra._solis
+uidNumber: 3503
+gidNumber: 5000
+homeDirectory: /home/dra._solis
+loginShell: /bin/bash
+userPassword: {SASL}dra._solis
+description: Encargado de Inteligencia_Artificial
+dn: uid=bravo,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ing._Bravo
+sn: Docente FIS
+uid: bravo
+uidNumber: 3322
+gidNumber: 5000
+homeDirectory: /home/bravo
+loginShell: /bin/bash
+userPassword: {SASL}bravo
+description: Encargado de Programacion_Basica
+dn: uid=mera,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Dr._Mera
+sn: Docente FIS
+uid: mera
+uidNumber: 3349
+gidNumber: 5000
+homeDirectory: /home/mera
+loginShell: /bin/bash
+userPassword: {SASL}mera
+description: Encargado de Bases_de_Datos
+dn: uid=cevallos,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ing._Cevallos
+sn: Docente FIS
+uid: cevallos
+uidNumber: 3853
+gidNumber: 5000
+homeDirectory: /home/cevallos
+loginShell: /bin/bash
+userPassword: {SASL}cevallos
+description: Encargado de Redes_de_Computadoras
+dn: uid=vargas,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ing._Vargas
+sn: Docente FIS
+uid: vargas
+uidNumber: 3073
+gidNumber: 5000
+homeDirectory: /home/vargas
+loginShell: /bin/bash
+userPassword: {SASL}vargas
+description: Encargado de Seguridad_Informatica
+dn: uid=lopez,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ing._Lopez
+sn: Docente FIS
+uid: lopez
+uidNumber: 3236
+gidNumber: 5000
+homeDirectory: /home/lopez
+loginShell: /bin/bash
+userPassword: {SASL}lopez
+description: Encargado de Desarrollo_Web
+dn: uid=perez,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Mat._Perez
+sn: Docente FIS
+uid: perez
+uidNumber: 3555
+gidNumber: 5000
+homeDirectory: /home/perez
+loginShell: /bin/bash
+userPassword: {SASL}perez
+description: Encargado de Calculo_Vectorial
+dn: uid=gomez,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Lic._Gomez
+sn: Docente FIS
+uid: gomez
+uidNumber: 3446
+gidNumber: 5000
+homeDirectory: /home/gomez
+loginShell: /bin/bash
+userPassword: {SASL}gomez
+description: Encargado de Etica_Profesional
+dn: uid=zurita,ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Ing._Zurita
+sn: Docente FIS
+uid: zurita
+uidNumber: 3860
+gidNumber: 5000
+homeDirectory: /home/zurita
+loginShell: /bin/bash
+userPassword: {SASL}zurita
+description: Encargado de Sistemas_Operativos

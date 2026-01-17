@@ -1,57 +1,106 @@
-# S.I.G.A.L. - Sistema Integrado de Gestión y Auditoría de Laboratorios
+# Servicio Integrado de Directorio y Autenticación
 
-**Estudiante:** Yasid Jiménez  
-**Materia:** Computación Distribuida  
-**Facultad:** Ingeniería de Sistemas (FIS - EPN)
-
----
+Este proyecto implementa un prototipo funcional de una infraestructura de autenticación centralizada para la **Facultad de Ingeniería de Sistemas (FIS)**. Utiliza tecnologías de código abierto para simular un entorno de laboratorio real, integrando servicios de directorio, autenticación segura, resolución de nombres y sincronización de tiempo.
 
 ## 📋 Descripción del Proyecto
-Este proyecto implementa un prototipo de infraestructura de **Identidad Centralizada** para los laboratorios de la FIS. El objetivo es sustituir las cuentas locales inseguras por un sistema distribuido que garantice:
 
-1.  **No Repudio:** Autenticación estricta mediante **Kerberos V5**.
-2.  **Trazabilidad:** Asociación de activos (PCs) con usuarios responsables mediante **OpenLDAP**.
-3.  **Auditoría Forense:** Capacidad de identificar al responsable de un equipo en un momento específico (ej. en caso de daño de hardware).
+El sistema automatiza el despliegue y la configuración de los siguientes servicios en un servidor Linux (Ubuntu/Debian):
 
-## 🏗️ Arquitectura del Sistema
-El sistema despliega los siguientes servicios integrados sobre Linux (Ubuntu/WSL):
+* **OpenLDAP (Slapd):** Directorio centralizado para almacenar usuarios, materias, profesores y activos (PCs).
+* **Kerberos (KDC):** Protocolo de autenticación segura para validar identidades sin transmitir contraseñas en texto plano.
+* **Bind9 (DNS):** Resolución de nombres local para el dominio `fis.epn.local`.
+* **Chrony (NTP):** Sincronización de tiempo para asegurar la validez de los tickets Kerberos.
 
-* **Kerberos KDC:** Gestión de tickets (TGT/TGS) y autenticación segura.
-* **OpenLDAP:** Directorio de usuarios (Estudiantes) y activos (Laboratorios/PCs).
-* **BIND9 (DNS):** Resolución de nombres de dominio (`fis.epn.local`) necesaria para el protocolo Kerberos.
-* **Chrony (NTP):** Sincronización de tiempo para evitar ataques de repetición.
+Además, incluye un **Script de Gestión en Bash** que actúa como interfaz principal para:
+
+1. Aprovisionar el servidor desde cero.
+2. Simular el inicio de sesión de estudiantes en los laboratorios.
+3. Auditar accesos y detectar incidentes de seguridad.
 
 ## 🚀 Instalación y Despliegue
 
-El despliegue está totalmente automatizado mediante el script `JimenezY-Proyecto2.sh`.
+### Pasos de Instalación
 
-### Requisitos
-* Ubuntu 20.04/22.04/24.04 (o WSL2).
-* Permisos de Superusuario (Root).
+1. **Clonar el repositorio:**
+```bash
+git clone https://github.com/ImYasid/JimenezY-Proyecto2.git
+cd JimenezY-Proyecto2
 
-### Pasos
-1.  Clonar este repositorio.
-2.  Dar permisos de ejecución al script:
-    ```bash
-    chmod +x JimenezY-Proyecto2.sh
-    ```
-3.  Ejecutar el instalador:
-    ```bash
-    sudo ./JimenezY-Proyecto2.sh
-    ```
+```
 
-> **Nota:** El script realizará una limpieza de instalaciones previas de Kerberos/LDAP para garantizar un despliegue limpio.
 
-## 🧪 Caso de Uso y Demostración (Automática)
+2. **Dar permisos de ejecución al script:**
+```bash
+chmod +x JimenezY-Proyecto2.sh
 
-Al finalizar la instalación, el script ejecuta automáticamente un **Simulacro de Auditoría** con el siguiente escenario real:
+```
 
-1.  **Incidente:** Se reporta un daño en el teclado de la máquina ubicada en el **Piso 5, Laboratorio 2, PC 01**.
-2.  **Identificación:** El administrador consulta al sistema por el ID del activo (`P5-L2-PC01`).
-3.  **Resultado:** El sistema cruza la información de LDAP y Kerberos para revelar el nombre y código único del estudiante responsable en ese horario.
 
-### Credenciales de Prueba Generadas
-* **Realm:** `FIS.EPN.LOCAL`
-* **Admin Principal:** `admin/admin`
-* **Usuario de Prueba:** `219001` (Yasid Jimenez)
+3. **Ejecutar el script principal:**
+```bash
+sudo ./JimenezY-Proyecto2.sh
+
+```
+
+## ⚙️ Configuración y Uso
+
+Al iniciar el script, verás un menú interactivo con las siguientes opciones:
+
+### 1. ⚙️ Formatear y Reinstalar el Sistema
+
+* **Qué hace:** Detiene todos los servicios, borra las bases de datos existentes (LDAP/Kerberos) y regenera toda la configuración desde cero.
+* **Cuándo usarlo:** En la primera ejecución o si necesitas "resetear" el laboratorio a su estado de fábrica.
+* **Datos generados:** Crea automáticamente 15 estudiantes aleatorios, 10 materias fijas, profesores asignados y 15 computadoras (Activos).
+
+### 2. 🔄 Cambiar de PC
+
+* **Qué hace:** Consulta al directorio LDAP para listar las computadoras disponibles (`P5-L3-PC01`, etc.).
+* **Uso:** Permite seleccionar desde qué equipo se está simulando el acceso. Esto afecta los registros en el log de auditoría.
+
+### 3. 🖥️ Simular Ingreso de Estudiante
+
+* **Qué hace:** Muestra una lista de usuarios de prueba (Código y Contraseña) y solicita credenciales.
+* **Validación:**
+1. Verifica la contraseña contra **Kerberos**.
+2. Verifica en **LDAP** si el estudiante tiene una materia inscrita en el horario actual.
+3. Autoriza o deniega el acceso y guarda el evento en el log.
+
+### 4. 📋 Reportes y Auditoría
+
+* **Qué hace:** Permite visualizar los intentos de acceso (exitosos o fallidos).
+* **Funcionalidad:** Puedes filtrar por la PC actual, buscar una PC específica (útil para informática forense) o ver el historial completo.
+
+## 📂 Estructura del Repositorio
+
+El proyecto mantiene una estructura limpia donde el script genera dinámicamente los archivos necesarios.
+
+```text
+JimenezY-Proyecto2/
+├── proyecto_sistemas.sh      # Script principal (Instalador + Controlador)
+├── README.md                 # Documentación del proyecto
+├── config/                   # (Generado dinámicamente) Archivos .conf para servicios
+│   ├── named.conf.local      # Configuración de Zona DNS
+│   ├── db.fis.epn.local      # Zona Directa DNS
+│   ├── krb5.conf             # Configuración del Reino Kerberos
+│   └── chrony.conf           # Configuración de NTP
+└── data/                     # (Generado dinámicamente) Archivos LDIF para LDAP
+    ├── 1_estructura.ldif     # Estructura base (OUs: Estudiantes, Materias, etc.)
+    ├── 2_profesores.ldif     # Datos de docentes
+    ├── 3_activos.ldif        # Inventario de computadoras
+    └── 4_materias.ldif       # Asignaturas y horarios
+
+```
+
+## 🛡️ Seguridad y Credenciales
+
+Para efectos de prototipo académico, se utilizan las siguientes credenciales predeterminadas dentro del script:
+
+* **Dominio:** `FIS.EPN.LOCAL`
+* **Admin LDAP/Kerberos:** `admin` / `admin/admin`
 * **Contraseña Maestra:** `Sistemas2026`
+* **Log de Auditoría:** `/var/log/fis_auditoria.log`
+
+## 👤 Autor
+
+**Yasid Jiménez**
+Facultad de Ingeniería de Sistemas (FIS) - EPN

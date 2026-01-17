@@ -1,0 +1,60 @@
+dn: cn=Computacion_Distribuida,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Computacion_Distribuida
+gidNumber: 5000
+description: Horario:07-09|Profesor:Ing._Tomala
+
+dn: cn=Inteligencia_Artificial,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Inteligencia_Artificial
+gidNumber: 5001
+description: Horario:07-09|Profesor:Dra._Solis
+
+dn: cn=Programacion_Basica,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Programacion_Basica
+gidNumber: 5002
+description: Horario:09-11|Profesor:Ing._Bravo
+
+dn: cn=Bases_de_Datos,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Bases_de_Datos
+gidNumber: 5003
+description: Horario:09-11|Profesor:Dr._Mera
+
+dn: cn=Redes_de_Computadoras,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Redes_de_Computadoras
+gidNumber: 5004
+description: Horario:11-13|Profesor:Ing._Cevallos
+
+dn: cn=Seguridad_Informatica,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Seguridad_Informatica
+gidNumber: 5005
+description: Horario:14-16|Profesor:Ing._Vargas
+
+dn: cn=Desarrollo_Web,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Desarrollo_Web
+gidNumber: 5006
+description: Horario:14-16|Profesor:Ing._Lopez
+
+dn: cn=Calculo_Vectorial,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Calculo_Vectorial
+gidNumber: 5007
+description: Horario:16-18|Profesor:Mat._Perez
+
+dn: cn=Etica_Profesional,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Etica_Profesional
+gidNumber: 5008
+description: Horario:16-18|Profesor:Lic._Gomez
+
+dn: cn=Sistemas_Operativos,ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: posixGroup
+cn: Sistemas_Operativos
+gidNumber: 5009
+description: Horario:18-20|Profesor:Ing._Zurita
+

@@ -1,0 +1,19 @@
+dn: ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: organizationalUnit
+ou: FIS
+
+dn: ou=Estudiantes,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: organizationalUnit
+ou: Estudiantes
+
+dn: ou=Materias,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: organizationalUnit
+ou: Materias
+
+dn: ou=Profesores,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: organizationalUnit
+ou: Profesores
+
+dn: ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: organizationalUnit
+ou: Activos

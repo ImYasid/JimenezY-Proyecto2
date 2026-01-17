@@ -1,0 +1,135 @@
+dn: cn=P5-L3-PC01,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC01
+ipHostNumber: 192.168.50.1
+description: Asignada a estudiante 202310649
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC02,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC02
+ipHostNumber: 192.168.50.2
+description: Asignada a estudiante 202005544
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC03,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC03
+ipHostNumber: 192.168.50.3
+description: Asignada a estudiante 202402716
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC04,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC04
+ipHostNumber: 192.168.50.4
+description: Asignada a estudiante 202402317
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC05,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC05
+ipHostNumber: 192.168.50.5
+description: Asignada a estudiante 202010372
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC06,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC06
+ipHostNumber: 192.168.50.6
+description: Asignada a estudiante 202212175
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC07,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC07
+ipHostNumber: 192.168.50.7
+description: Asignada a estudiante 202311814
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC08,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC08
+ipHostNumber: 192.168.50.8
+description: Asignada a estudiante 202006563
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC09,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC09
+ipHostNumber: 192.168.50.9
+description: Asignada a estudiante 202308519
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC10,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC10
+ipHostNumber: 192.168.50.10
+description: Asignada a estudiante 202009679
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC11,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC11
+ipHostNumber: 192.168.50.11
+description: Asignada a estudiante 202411581
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC12,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC12
+ipHostNumber: 192.168.50.12
+description: Asignada a estudiante 202305328
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC13,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC13
+ipHostNumber: 192.168.50.13
+description: Asignada a estudiante 202306127
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC14,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC14
+ipHostNumber: 192.168.50.14
+description: Asignada a estudiante 202105984
+l: Laboratorio 3
+
+dn: cn=P5-L3-PC15,ou=Activos,ou=FIS,dc=fis,dc=epn,dc=local
+objectClass: device
+objectClass: ipHost
+objectClass: top
+cn: P5-L3-PC15
+ipHostNumber: 192.168.50.15
+description: Asignada a estudiante 202007131
+l: Laboratorio 3
+
